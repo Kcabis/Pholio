@@ -1,0 +1,363 @@
+/* Basic styling for the layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color:rgba(232, 238, 238, 0.955) /* Light background color for the page */
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh; /* Full height layout */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 150px; /* Default width of the sidebar */
+    background-color: #333; /* Dark background color */
+    color: white;
+    padding: 20px;
+    position: relative;
+    transition: width 0.3s; /* Smooth transition for width changes */
+}
+
+/* Sidebar styling when collapsed */
+.sidebar.collapsed {
+    width: 70px; /* Reduced width when collapsed */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0; /* Space between each list item */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Positioned to the top left inside the sidebar */
+}
+
+/* Main content area styling */
+.main-content {
+    flex: 1; /* Takes the remaining space next to the sidebar */
+    padding: 20px;
+    overflow-y: auto;
+    transition: margin-left 0.3s; /* Smooth transition for margin changes */
+}
+
+/* Header styling */
+/* Header styling */
+header {
+    display: flex;
+    justify-content: center; /* Center the header content horizontally */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Container for header content to control layout */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; /* Space between search box and profile icon */
+}
+
+/* Container for the search box */
+.search-container {
+    display: flex;
+    justify-content: center; /* Center the search box */
+    flex-grow: 1; /* Allow the search box container to grow */
+}
+
+#searchBox {
+    width: 250px;
+    padding: 2px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+/* Profile icon styling */
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular profile icon */
+    cursor: pointer;
+}
+
+/* Shareholder options styling */
+.shareholder-options {
+    margin-bottom: 20px;
+}
+
+#shareholderSelect {
+    padding: 7px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100px;
+}
+
+#addShareholder, #editShareholder {
+    padding: 8px;
+    font-size: 12px;
+    margin-left: 10px; /* Space between buttons */
+    cursor: pointer;
+    background-color: #007bff; /* Blue background for buttons */
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Overview cards styling */
+.overview {
+    display: flex;
+    justify-content: space-between; /* Space between cards */
+    margin-bottom: 20px;
+}
+/* Styling for the .card3 container */
+.card3 {
+    width: 20%; /* Width of the card */
+    background-color: rgb(150, 149, 149);
+    padding: 15px; /* Reduced padding */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space items evenly */
+}
+
+/* Styling for the card headings and values */
+.card3 h3, .card3 p {
+    margin: 0; /* Remove default margins */
+    padding: 5px; /* Add padding */
+}
+
+.card3 h3 {
+    font-size: 16px; /* Adjust font size for headings */
+}
+
+.card3 p {
+    font-size: 14px; /* Adjust font size for values */
+}
+
+/* Styling for Realized Gain */
+#Realizedgain {
+    font-size: 16px; /* Font size for realized gain */
+    font-weight: bold; /* Bold text */
+    color: #28a745; /* Green color */
+    margin-bottom: 5px; /* Space below the realized gain */
+}
+
+/* Styling for Unrealized Gain */
+#UnrealizedGain {
+    font-size: 16px; /* Font size for unrealized gain */
+    font-weight: bold; /* Bold text */
+    color: #dc3545; /* Red color */
+    margin-bottom: 5px; /* Space below the unrealized gain */
+}
+
+.card1 {
+    width: 20%; /* Width of each card */
+    background-color: rgb(32, 237, 90);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    text-align: center; /* Centered text */
+}
+.card2 {
+    width: 20%; /* Width of each card */
+    background-color: rgb(56, 66, 242);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    text-align: center; /* Centered text */
+}
+.card4 {
+    width: 20%; /* Width of each card */
+    background-color: rgb(167, 174, 131);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    text-align: center; /* Centered text */
+}
+
+
+
+
+
+/* Portfolio table styling */
+.portfolio-table {
+    background-color:lightgray(255, 254, 254);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-table table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between table borders */
+}
+
+.portfolio-table table th, .portfolio-table table td {
+    padding: 15px;
+    border-radius:0px;
+    border-bottom: 1px solid #5e72bbe2; /* Light grey border under each cell */
+    text-align: left; /* Left-aligned text */
+    color: #090808;
+}
+
+.portfolio-table table th {
+    background-color: #7a74ea; /* Light grey background for table headers */
+}
+.portfolio-table table tr{
+    background-color:rgba(136, 177, 186, 0.827);
+    color: #0f0707;
+
+}
+/* Styling for the table search box */
+.table-search-container {
+    text-align: right; /* Align the search box to the right */
+    margin-bottom: 10px; /* Add some space below the search box */
+    
+}
+
+#tableSearchBox {
+    padding: 4px;
+    font-size: 12px;
+    border: 1px solid #0f0707;
+    border-radius: 4px;
+}
+
+
+/* Add stock button styling */
+#addStock {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #2d1bf1; /* Green background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#Sellstock{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #2d1bf1; /* Green background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+}
+#select.ok{
+    margin-top: 5px;
+}
+#sel.form-select{
+    background-color: #007bff;
+    margin-left: 5px;
+}
+
+/* Popup styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative; /* Positioned relative to the popup */
+}
+
+.popup-content h2 {
+    margin-top: 0; /* Removes top margin */
+}
+
+/* Popup form element styling */
+.popup-content label {
+    margin-bottom: 5px;
+    font-weight: bold; /* Bold labels */
+}
+
+.popup-content input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light grey border */
+    width: 100%; /* Full width inputs */
+}
+
+.popup-content button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff; /* Blue background for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px; /* Space between buttons */
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Positioned at the top right */
+    cursor: pointer;
+    font-size: 20px;
+}
+#dailyGains, #marketValue ,#currentInvestment {
+    display: inline-block; /* To keep the text inside a box-like element */
+    padding: 10px 15px; /* Adjust the padding to control box size */
+    border: 2px solid #ccc; /* Define the border for the box */
+    border-radius: 5px; /* Rounded corners for the box */
+    background-color: #f8f9fa; /* Background color for the box */
+    font-size: 16px; /* Adjust font size */
+    color: #000; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text inside the box */
+    width: 100px; /* Set a fixed width if needed */
+}
+#Realizedgain,#UnrealizedGain{
+    display:inline-block; /* To keep the text inside a box-like element */
+    padding: 8px 8px; /* Adjust the padding to control box size */
+    border: 2px solid #ccc; /* Define the border for the box */
+    border-radius: 5px; /* Rounded corners for the box */
+    background-color: #71ec3978; /* Background color for the box */
+    font-size: 16px; /* Adjust font size */
+    color: #000; /* Text color */
+    font-weight: bold; /* Make the text bold */
+    text-align:center; /* Center the text inside the box */
+    width: 100px;
+}
+
+
+
